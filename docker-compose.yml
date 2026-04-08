@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: pes_pro_x
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports: ['5432:5432']
+    volumes: [pg_data:/var/lib/postgresql/data]
+
+  redis:
+    image: redis:7
+    ports: ['6379:6379']
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    env_file: .env.example
+    depends_on: [postgres, redis]
+    ports: ['4000:4000']
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    env_file: .env.example
+    depends_on: [api]
+    ports: ['3000:3000']
+
+volumes:
+  pg_data:
