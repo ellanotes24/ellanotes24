@@ -1,0 +1,69 @@
+.ProfileServicesCard {
+  margin-top: 16px;
+  padding: 16px;
+
+  h3,
+  h4 {
+    margin-top: 0;
+  }
+}
+
+.ProfileServicesCard-header,
+.ProfileServicesCard-actions,
+.ProfileServicesCard-moderation {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.ProfileServicesCard-availability,
+.ProfileServicesCard-status {
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 9px;
+  text-transform: capitalize;
+}
+
+.ProfileServicesCard-availability--available,
+.ProfileServicesCard-status--approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.ProfileServicesCard-availability--busy,
+.ProfileServicesCard-status--pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.ProfileServicesCard-availability--unavailable,
+.ProfileServicesCard-status--rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.ProfileServicesCard-note {
+  background: var(--control-bg);
+  border-radius: var(--border-radius);
+  padding: 8px 10px;
+}
+
+.ProfileServicesCard-note--danger {
+  color: #991b1b;
+}
+
+.ProfileServicesCard-description {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 767px) {
+  .ProfileServicesCard-header,
+  .ProfileServicesCard-actions,
+  .ProfileServicesCard-moderation {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

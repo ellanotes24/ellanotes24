@@ -1,0 +1,65 @@
+ellanotes-profile-services-card:
+  admin:
+    settings:
+      title: Profile Services Card
+      description: Allow users to add a moderated, profile-level services card.
+      enabled_label: Enable Profile Services Card
+      allow_guest_view_label: Allow guests to view approved public cards
+      require_approval_label: Require approval before cards become public
+      reapprove_after_edit_label: Require reapproval after owner edits
+      allow_external_url_label: Allow external URL field
+      allow_price_label_label: Show price label field
+      allow_contact_label_label: Show contact label field
+      max_title_length_label: Maximum title length
+      max_description_length_label: Maximum description length
+      max_category_length_label: Maximum category length
+      max_price_label_length_label: Maximum price label length
+      max_contact_label_length_label: Maximum contact label length
+      allowed_url_schemes_label: Allowed URL schemes
+    permissions:
+      view_label: View profile services cards
+      create_label: Create own services card
+      edit_own_label: Edit own services card
+      delete_own_label: Delete own services card
+      edit_any_label: Edit any services card
+      delete_any_label: Delete any services card
+      moderate_label: Approve or reject services cards
+      configure_label: Configure Profile Services Card
+  forum:
+    availability:
+      available: Available
+      busy: Busy
+      unavailable: Unavailable
+    card:
+      heading: Services
+      loading: Loading services card…
+      empty: You have not added a services card yet.
+      category: "Category: {category}"
+      price: "Price: {price}"
+      contact: "Contact: {contact}"
+      website: Website
+      hidden_note: Your services card is hidden.
+      pending_note: Your services card is pending approval.
+      rejected_note: Your services card was rejected.
+    actions:
+      add: Add Services
+      edit: Edit Services
+      delete: Delete Services
+      approve: Approve
+      reject: Reject
+    modal:
+      title: Edit Services
+      save: Save
+      cancel: Cancel
+      fields:
+        title: Service title
+        category: Category
+        description: Description
+        availability: Availability
+        price_label: Price label
+        external_url: External URL
+        contact_label: Contact label
+        is_public: Show this services card publicly
+    errors:
+      already_exists: You already have a services card.
+      invalid_url: The external URL is invalid or uses a disallowed scheme.

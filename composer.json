@@ -1,0 +1,42 @@
+{
+  "name": "ellanotes/flarum-profile-services-card",
+  "description": "A universal Flarum 2 extension that lets users show a moderated services card on their profile.",
+  "type": "flarum-extension",
+  "license": "MIT",
+  "version": "0.1.0",
+  "require": {
+    "php": ">=8.3",
+    "flarum/core": "^2.0.0-rc.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "EllaNotes\\ProfileServicesCard\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "EllaNotes\\ProfileServicesCard\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Profile Services Card",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-briefcase",
+        "backgroundColor": "#3b82f6",
+        "color": "#ffffff"
+      },
+      "links": {
+        "source": "https://github.com/ellanotes/flarum-profile-services-card",
+        "issues": "https://github.com/ellanotes/flarum-profile-services-card/issues"
+      }
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "phpstan": "phpstan analyse src tests"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
